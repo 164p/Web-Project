@@ -1,0 +1,1 @@
+{"version":"1.0.0","name":"backend","dependencies":{"bcrypt":{"version":"5.0.1"},"cors":{"version":"2.8.5"},"dotenv":{"version":"16.0.1"},"express":{"version":"4.18.1"},"jsonwebtoken":{"version":"8.5.1"},"mongoose":{"version":"6.3.6"},"multer":{"version":"1.4.5-lts.1"},"validator":{"version":"13.7.0"}}}

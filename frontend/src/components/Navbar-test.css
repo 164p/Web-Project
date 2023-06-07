@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@media screen and (max-width: 800px) {
+  #signin,
+  #signup {
+    width: auto;
+    height: auto;
+  }
+
+  .me-2 {
+    width: auto;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .me-2 {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+}
+
+#logo{
+    font-family: 'Press Start 2P', cursive;
+    -webkit-text-stroke: 1px black;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    text-decoration: none;
+    font-size: 3.8dvh;
+    margin-left: 5px;
+}
+
+#logo:hover {
+    font-size: 4dvh;
+    background-color: transparent;
+  }
+
+.me-2{
+  width: 1050px;
+  margin-left: 10px;
+}
+
+#signin{
+  margin-left: 5px;
+  background-color: #003A6C;
+  border-radius: 10px;
+  color: white;
+  border-style: solid;
+  border-color: black;
+
+}
+
+#signup{
+  margin-left: 5px;
+  background-color: white;
+  border-radius: 10px;
+  border-style: solid;
+  color: black;
+  border-color: black;
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin: 0px -10px;
+}
+
+.item {
+  width: 50%;
+  margin-bottom: 20px;
+  padding: 0px 10px;
+}
+
+.content {
+  color: #242424;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px;
+}
+
+.btn-danger{
+  background-color: #003A6C !important;
+  color: white !important;
+  border-color: black;
+}

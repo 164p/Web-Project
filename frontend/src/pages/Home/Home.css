@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body{
+    font-family: 'Press Start 2P', cursive;
+}
+
+.carousel {
+    width:900px;
+    height:500px;
+    margin: auto;
+    margin-top: 80px;
+  }
+
+#adventure-message{
+    background-color: #D9D9D9;
+    border-style: solid;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+a {
+    color: black;
+}
+
+a:hover{
+    color: white;
+}
