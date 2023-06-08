@@ -3,9 +3,11 @@ import './ItemList.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import ItemCard from '../../components/Itemcard/Itemcard.js';
+import { useAuthContext } from '../../hooks/useAuthContext'
 
 function ShowItemList() {
   const [items, setItems] = useState([]);
+  const { user } = useAuthContext()
 
   useEffect(() => {
     axios
@@ -29,18 +31,20 @@ function ShowItemList() {
         <div className='row'>
           <div className='col-md-12'>
             <br />
-            <h2 className='display-4 text-center'>Game Console List</h2>
+            <h2 className='game-list'>Game Console</h2>
           </div>
-
-          <div className='col-md-11'>
-            <Link
+          {user && (
+              <div>
+              <Link
               to='/create-item'
               className='btn btn-outline-warning float-right'
             >
               + Add New Game Console
             </Link>
-            <br />
-            <br />
+              </div>
+              )}
+
+          <div className='col-md-11'>
             <hr />
           </div>
         </div>

@@ -6,14 +6,14 @@ const ItemCard = (props) => {
   const item = props.item;
 
   return (
+    <div className='im'>
     <div className='card-container'>
-      <img height={200} src={item.image}></img>
-      <div className='desc'>
-      <h2>
-        <Link to={`/show-item/${item._id}`}>{item.name}</Link>
-      </h2>
-      <p>{item.manufacturer}</p>
-      </div>
+      <img className='pic' src={item.image}></img>
+    </div>
+    <div className='desc'>
+      <Link to={`/show-item/${item._id}`}>{item.name}</Link>
+    <p className='manufacturer'>{item.manufacturer}</p>
+    </div>
     </div>
   );
 };

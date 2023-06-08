@@ -10,24 +10,25 @@ const userSchema = new Schema({
     required: true,
     unique: true
   },
-  password: {
-    type: String,
-    required: true
-  },
   email: {
     type: String,
     required: true,
     unique: true
   },
-  photo: {
+  password: {
     type: String,
-  } 
+    required: true
+  },
+  items: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Item',
+    },
+  ],
 })
 
-// static signup method
-userSchema.statics.signup = async function(username ,password, email,photo) {
+userSchema.statics.signup = async function(username ,password, email) {
 
-  // validation
   if (!username || !password) {
     throw Error('All fields must be filled')
   }
@@ -35,7 +36,7 @@ userSchema.statics.signup = async function(username ,password, email,photo) {
     throw Error('Email not valid')
   }
   if (!validator.isStrongPassword(password)) {
-    throw Error('Password not strong enough')
+    throw Error('Password not strong enough: Require 8 letters ,1 Uppercase, 1 Lowercase ,1 Number ,1 Special alphabet')
   }
 
   const email_exists = await this.findOne({ email })
@@ -53,23 +54,11 @@ userSchema.statics.signup = async function(username ,password, email,photo) {
   const salt = await bcrypt.genSalt(10)
   const hash = await bcrypt.hash(password, salt)
 
+  const user = await this.create({username, password: hash, email})
 
-  const user = await this.create({
-    username,
-    password: hash,
-    email,
-    photo,
-  });
-
-  return {
-    _id: user._id,
-    username: user.username,
-    email: user.email,
-    photo: user.photo,
-  };
+  return user
 }
 
-// static login method
 userSchema.statics.login = async function(username , password) {
 
   if (!username || !password) {

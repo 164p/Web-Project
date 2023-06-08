@@ -11,12 +11,48 @@
     margin-left: 0;
   }
 }
-
-@media screen and (max-width: 576px) {
+@media (min-width: 300px) {
   .me-2 {
     width: 100%;
     margin-left: 0;
     margin-bottom: 5px;
+  }
+  #signup{
+    margin-left: 5px;
+    background-color: white;
+    border-radius: 10px;
+    border-style: solid;
+    color: black;
+    border-color: black;
+    -webkit-text-stroke: 1px black;
+    margin-left: 0px;
+  }
+  .user-profile{
+    margin-left: 0px;
+  }
+  
+}
+
+
+@media (min-width: 900px) {
+  .me-2 {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+  #signup{
+    margin-left: 5px;
+    background-color: white;
+    border-radius: 10px;
+    border-style: solid;
+    color: black;
+    border-color: black;
+    -webkit-text-stroke: 1px black;
+    margin-left: 1100px;
+  
+  }
+  .user-profile{
+    margin-left: 1150px;
   }
 }
 
@@ -47,16 +83,7 @@
   color: white;
   border-style: solid;
   border-color: black;
-
-}
-
-#signup{
-  margin-left: 5px;
-  background-color: white;
-  border-radius: 10px;
-  border-style: solid;
-  color: black;
-  border-color: black;
+  -webkit-text-stroke: 1px black;
 }
 
 .flexbox {
@@ -85,4 +112,6 @@
   background-color: #003A6C !important;
   color: white !important;
   border-color: black;
+  font-family: 'Press Start 2P', cursive;
+  -webkit-text-stroke: 1px black;
 }

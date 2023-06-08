@@ -5,7 +5,6 @@ body{
 
 .carousel {
     width:900px;
-    height:500px;
     margin: auto;
     margin-top: 80px;
   }
@@ -27,4 +26,21 @@ a {
 
 a:hover{
     color: white;
+}
+
+.home-img{
+    border-style: solid;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.home-t{
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+.box{
+    width: 900px;
+    height: 513px;
+
 }

@@ -5,7 +5,6 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const CreateItem = (props) => {
-  // Define the state with useState hook
   const navigate = useNavigate();
   const [item, setItem] = useState({
     name: '',
@@ -33,7 +32,6 @@ const CreateItem = (props) => {
             image: '',
         });
 
-        // Push to /
         navigate('/item');
       })
       .catch((err) => {
@@ -52,8 +50,7 @@ const CreateItem = (props) => {
             </Link>
           </div>
           <div className='col-md-8 m-auto'>
-            <h1 className='display-4 text-center'>Add Book</h1>
-            <p className='lead text-center'>Create new book</p>
+            <h1 className='display-4 text-center'>Create Game Console</h1>
 
             <form noValidate onSubmit={onSubmit}>
               <div className='form-group'>
@@ -78,7 +75,7 @@ const CreateItem = (props) => {
                   onChange={onChange}
                 />
               </div>
-
+              <br />
               <div className='form-group'>
                 <input
                   type='date'
@@ -89,7 +86,7 @@ const CreateItem = (props) => {
                   onChange={onChange}
                 />
               </div>
-
+              <br />
               <div className='form-group'>
                 <input
                   type='text'
@@ -100,6 +97,7 @@ const CreateItem = (props) => {
                   onChange={onChange}
                 />
               </div>
+              <br />
               <div className='form-group'>
                 <input
                   type='text'

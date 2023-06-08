@@ -5,18 +5,12 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
-  const [photo, setPhoto] = useState(null); // Add state for the photo
   const { signup, error, isLoading } = useSignup();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await signup(username, email, password, photo); // Pass the photo to the signup function
-  };
-
-  const handlePhotoChange = (e) => {
-    const file = e.target.files[0];
-    setPhoto(file);
+    await signup(username, email, password); 
   };
 
   return (
@@ -41,8 +35,6 @@ const Signup = () => {
         onChange={(e) => setPassword(e.target.value)}
         value={password}
       />
-      <label>Photo:</label>
-      <input type="file" accept="image/*" onChange={handlePhotoChange} />
 
       <button disabled={isLoading}>Sign up</button>
       {error && <div className="error">{error}</div>}

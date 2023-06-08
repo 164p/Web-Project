@@ -1,9 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { useAuthContext } from './hooks/useAuthContext'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.css';
 
-// pages & components
 import Home from './pages/Home/Home'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
@@ -13,6 +11,7 @@ import NavScroll from './components/Navbar'
 import CreateItem from './pages/CreateItem/CreateItem'
 import ItemDetail from './pages/ItemDetail/itemDetail'
 import UpdateItem from './pages/UpdateItem/UpdateItem'
+import Footer from './components/Footer'
 
 function App() {
   const { user } = useAuthContext()
@@ -57,6 +56,7 @@ function App() {
             />
           </Routes>
         </div>
+        <Footer/>
       </BrowserRouter>
     </div>
   );
